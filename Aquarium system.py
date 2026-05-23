@@ -4,7 +4,7 @@ class FishFactory:
     def create_fish(name):
         return {"name": name.capitalize()}
 
-# 2. Singleton Pattern: Ensures only one aquarium exists
+# 2. Singleton Pattern：ensures that no matter how many times you try to create an "Aquarium," you only ever get one instance. This prevents data loss.
 class Aquarium:
     _instance = None
 
@@ -17,11 +17,14 @@ class Aquarium:
     def add_fish(self, name, qty):
         fish = FishFactory.create_fish(name)
         self.inventory[fish["name"]] = self.inventory.get(fish["name"], 0) + qty
-
+     #This is the logic that processes your inputs.
+     #self.inventory.get(fish["name"], 0): This is a safe way to check the dictionary. 
+     
     def show(self):
         print("\n--- Aquarium Inventory ---")
         for fish, count in self.inventory.items():
             print(f"{fish}: {count}")
+            # If the fish is already in there, it returns the number; if not, it returns 0 so we don't get an error.
 
 # 3. Running the program
 if __name__ == "__main__":
