@@ -1,5 +1,5 @@
 # WEEK-7-ACTIVITY-2
-nventory Tracking: Easily add fish species (Goldfish, Shark, Angelfish, Tuna, Salmon) and update their quantities.
+ Easily add fish species (Goldfish, Shark, Angelfish, Tuna, Salmon) and update their quantities.
 Design Patterns:
 Singleton: Ensures only one aquarium instance manages the data.
 Factory: Standardizes the creation of fish entries.
